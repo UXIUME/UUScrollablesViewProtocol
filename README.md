@@ -11,7 +11,7 @@ let cell = InventoryCell.newAlways()
 let cell = InventoryCell.setup(in: tableView, at: indexPath, reuseAtTheIndexPathOnly: true)
 ```
 
----
+-
 
 返回值都是 ``InventoryCell``这样做的好处是不用注册cell，不需要管理***重用标识符***，不需要转换cell的类型
 
@@ -26,19 +26,19 @@ public static func setup(in tableView: UITableView, cellStyle: UITableViewCellSt
 
 public static func setup(in tableView: UITableView, at indexPath: IndexPath, reuseAtTheIndexPathOnly reusable: Bool = default) -> Self
 ```
----
+-
 
 1.上面这三个是核心方法，``newAways()``见名知意，总是创建新的cell。大家都知道在cell的代理方法中，滑动列表的时候代码会重复调用，如果创建的cell不想重用，可以调用此方法来创建。可以在任何方法中调用来创建cell，如：
 ![](https://user-gold-cdn.xitu.io/2018/8/20/16555beb58aedaa6?w=1842&h=442&f=jpeg&s=130737)
 
-----
+-
 
 2.``setup(in tableView: UITableView, cellStyle: UITableViewCellStyle = default)``这个方法与第一个刚好不同，等同于如下代码
 ![](https://user-gold-cdn.xitu.io/2018/8/20/16555bfd3d27a9ab?w=1480&h=156&f=jpeg&s=69367)
 
 创建的cell在滑动列表的时候会根据重用标识符进行重用，如果列表内容较多，且数据格式一致，墙裂建议使用此方法，节省系统资源
 
----
+-
 
 3.``setup(in tableView: UITableView, at indexPath: IndexPath, reuseAtTheIndexPathOnly reusable: Bool = default)``
 这个方法的参数 ***reuseAtTheIndexPathOnly*** 为``false``时，效果等同于2方法，都会对cell重用，之所以保留是因为这两个方法创建cell的方式不同。3方法是通过注册创建的。
@@ -56,7 +56,7 @@ public static func setup(in tableView: UITableView, at indexPath: IndexPath, reu
 
 自此，方法使用介绍完毕，内部实现相信大家也了然于心
 
----
+-
 
 然鹅，就这样结束了？
 ---
@@ -74,7 +74,7 @@ public static func setup(in tableView: UITableView, at indexPath: IndexPath, reu
 
 ### 五、小结
 
----
+-
 1、先说说代码中还存在的问题
 
 ① ``collectionViewCell``继承自``UICollectionReuseableView``,就是collectionView的区头区尾视图,这样造成在调用setup方法创建collectionViewCell的时候，编译器代码提示会把创建区头的方法也显示成创建collectionViewCell的方法：
@@ -90,7 +90,7 @@ public static func setup(in tableView: UITableView, at indexPath: IndexPath, reu
 
 ### 目前自己发现的问题有这些,欢迎一起探讨
 
----
+-
 
 2、说说代码中的一些小思考
 
