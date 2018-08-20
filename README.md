@@ -89,7 +89,7 @@ public static func setup(in tableView: UITableView, at indexPath: IndexPath, reu
 ④ ``collectionViewCell``的``newAlways()``方法是通过每次注册``随机的reuseIdentifier``来实现的，这样子滑动列表会一直创建新的cell，而没有复用，如果需要创建非常多的cell，对系统资源的占用比较多。
 初步构想通过自动释放池对创建的cell进行管理，对不在屏幕显示区域的cell手动释放内存，因为本人目前对Swift的自动释放池不太熟，目前轮子里没有加入相关的代码
 
-### 目前自己发现的问题有这些,欢迎一起探讨
+#### 目前自己发现的问题有这些,欢迎一起探讨
 
 ****
 
