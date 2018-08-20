@@ -11,7 +11,7 @@ let cell = InventoryCell.newAlways()
 let cell = InventoryCell.setup(in: tableView, at: indexPath, reuseAtTheIndexPathOnly: true)
 ```
 
-*
+***
 
 返回值都是 ``InventoryCell``这样做的好处是不用注册cell，不需要管理***重用标识符***，不需要转换cell的类型
 
