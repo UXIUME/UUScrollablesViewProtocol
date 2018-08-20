@@ -11,7 +11,7 @@ let cell = InventoryCell.newAlways()
 let cell = InventoryCell.setup(in: tableView, at: indexPath, reuseAtTheIndexPathOnly: true)
 ```
 
-===
+----
 
 返回值都是 ``InventoryCell``这样做的好处是不用注册cell，不需要管理***重用标识符***，不需要转换cell的类型
 
@@ -27,7 +27,7 @@ public static func setup(in tableView: UITableView, cellStyle: UITableViewCellSt
 public static func setup(in tableView: UITableView, at indexPath: IndexPath, reuseAtTheIndexPathOnly reusable: Bool = default) -> Self
 ```
 
-*
+----
 
 1.上面这三个是核心方法，``newAways()``见名知意，总是创建新的cell。大家都知道在cell的代理方法中，滑动列表的时候代码会重复调用，如果创建的cell不想重用，可以调用此方法来创建。可以在任何方法中调用来创建cell，如：
 ![](https://user-gold-cdn.xitu.io/2018/8/20/16555beb58aedaa6?w=1842&h=442&f=jpeg&s=130737)
