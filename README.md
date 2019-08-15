@@ -1,5 +1,5 @@
 # UUScrollablesViewProtocol
-一行代码创建cell
+iOS便捷创建cell的方法
 ### 一、上代码
 ![](https://user-gold-cdn.xitu.io/2018/8/20/16555bde9bbfbd58?w=2032&h=256&f=jpeg&s=114902)
 
